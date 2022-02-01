@@ -172,6 +172,27 @@ section{
     color: var(--grey);
     line-height: 1.8;
 }
+.services{
+    background: var(--white);
+}
+.services .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+}
+.services .box-container .box{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    border: .2rem solid var(--green);
+}
+.services .box-container .box .content{
+    font-size: 1.7rem;
+    color: var(--grey);
+    font-weight: bold;
+}
 .map .box-container .box .map-yandex{
     height: 60rem;
     margin-bottom: 2rem;
@@ -180,10 +201,17 @@ section{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 3rem;
+    padding: 1.5rem;
 }
 .box-row .card{
     text-align: center;
     padding: 1rem;
+}
+.box-row .card h3 {
+    font-size: 2.5rem;
+}
+.box-row .card p {
+    font-size: 1.7rem;
 }
 .place{
     background: var(--white);
@@ -216,7 +244,178 @@ section{
     font-size: 1.7rem;
         line-height: 1.5;
 }
-
+.gallery .row{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+}
+.gallery .row .box{
+    position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: 0.5s;
+}
+.gallery .row .box .imgBox img{
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+}
+.gallery .row .box .content {
+    position: absolute;
+        top: -100%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        color: var(--white);
+        font-size: 2.5rem;
+        line-height: 1.5;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 2rem;
+        padding-top: 5rem;
+        transition: 0.5s;
+}
+.gallery .row .box:hover .content{
+    top: 0;
+}
+.video{
+    background: var(--white);
+}
+.video-container{
+    text-align: center;
+}
+.video-container iframe{
+    width: 100%;
+   height: 50rem;
+}
+.sale{
+    position: relative;
+    background: url(../images/pic-2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    padding: 5rem 5%;
+    position: relative;
+    z-index: 3;
+}
+.sale::before{
+    content: "";
+    background: rgb(57 53 53 / 71%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.sale h2{
+    text-align: center;
+    font-size: 6rem;
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+.sale ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    gap: 2rem;
+}
+.sale ul li{
+    color: var(--white);
+      font-size: 2.3rem;
+      position: relative;
+      text-align: center;
+}
+.sale ul li::before{
+    content: "";
+    position: absolute;
+    width: 0.3em;
+    height: 100%;
+    background: var(--green);
+    top: 0;
+    left: 0;
+}
+.form{
+    text-align: center;
+}
+.form form{
+    padding: 2rem;
+}
+form .box .inputBox input {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.7rem;
+}
+form .box .inputBox input::placeholder{
+    text-transform: capitalize;
+}
+form .box .inputBox input:focus{
+    color: var(--black);
+    border-color: var(--green);
+}
+form .box .inputBox {
+    border-radius: 2rem;
+}
+form .box .inputBox span{
+    font-size: 2.5rem;
+      color: var(--black);
+}
+.contacts{
+    text-align: center;
+}
+.contacts .icons-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+}
+.contacts .icons-container .icons{
+    text-align: center;
+    padding: 3rem 2rem;
+}
+.contacts .icons-container .icons i{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background: var(--green);
+    color: var(--white);
+    margin-bottom: .5rem;
+    line-height: 5.8rem;
+    font-size: 2rem;
+}
+.contacts .icons-container .icons a{
+    font-size: 2rem;
+    color: var(--black);
+    padding: 1rem 0;
+    margin-left: 0.5rem;
+    font-weight: bold;
+}
+.contacts .icons-container .icons a:hover{
+    color: var(--green);
+}
+.footer{
+    padding: 1.6rem 7%;
+  background: var(--grey);
+  text-align: center;
+}
+.footer .share{
+    margin: 2rem 0;
+}
+.footer .share a{
+    height: 7rem;
+    width: 7rem;
+    line-height: 7rem;
+    color: var(--white);
+    background: var(--black);
+    margin: 0 1rem;
+    font-size: 3rem;
+    border: .2rem solid var(--white);
+}
+.footer .share a:hover{
+    background: var(--green);
+}
 /* media */
 
 
